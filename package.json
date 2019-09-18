@@ -5,5 +5,21 @@
   "repository": "https://github.com/jchui/fpas-calc.git",
   "author": "Jeremy <jeremy@jchui.me>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/styles.scss css/styles.css",
+    "css-watch": "yarn run css-build --watch",
+    "start": "yarn run css-watch"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
 }
