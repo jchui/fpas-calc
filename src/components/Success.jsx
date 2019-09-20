@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 class Success extends Component{
 
@@ -10,9 +10,14 @@ class Success extends Component{
 
     render(){
         return(
-            <div>
-                <h1 className="ui centered">Details Successfully Saved</h1>
-                <Button onClick={this.back}>Back</Button>
+            <div className="calculatorForm success">
+                <p>Your information has been successfully processed. Please see the table below for more details.</p>
+                <Button onClick={this.back} className="formBtn" animated="vertical">
+                    <Button.Content visible>Update Information</Button.Content>
+                    <Button.Content hidden>
+                        <Icon name='arrow down' />
+                    </Button.Content>
+                </Button>
             </div>
         )
     }

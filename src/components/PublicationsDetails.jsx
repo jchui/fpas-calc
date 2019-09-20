@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Progress, Icon } from 'semantic-ui-react';
 
-class CircumstancesDetails extends Component{
+class PublicationsDetails extends Component{
 
     saveAndContinue = (e) => {
         e.preventDefault()
@@ -17,24 +17,22 @@ class CircumstancesDetails extends Component{
         const { values } = this.props;
         return(
             <Form className="calculatorForm">
-                <Progress percent={66} active />
+                <Progress percent={50} active />
                 <div className="question">
-                    <p>Will you be applying with special circumstances?</p>
-
-                    <img src={process.env.PUBLIC_URL + "/img/click_here.png"} height="200px" alt="click"/>
+                    <p>Do you have any publications? (2 points)</p>
+                    <img src={process.env.PUBLIC_URL + "/img/take_a_note_2.png"} height="200px" alt="report"/>
                     <br/>
-
                     <Button.Group size='large'>
                         <Button
-                            value={1}
-                            onClick={this.props.handleChange('specialcircumstances')}
-                            active={!values.specialcircumstances ? false : true}
+                            value={2}
+                            onClick={this.props.handleChange('publications')}
+                            active={!values.publications ? false : true}
                         >Yes</Button>
                         <Button.Or />
                         <Button
                             value={0}
-                            onClick={this.props.handleChange('specialcircumstances')}
-                            active={!values.specialcircumstances ? true : false}
+                            onClick={this.props.handleChange('publications')}
+                            active={!values.publications ? true : false}
                         >No</Button>
                     </Button.Group>
                 </div>
@@ -47,7 +45,7 @@ class CircumstancesDetails extends Component{
                 <Button onClick={this.saveAndContinue} className="formBtn" animated>
                     <Button.Content visible>Save and Continue</Button.Content>
                     <Button.Content hidden>
-                        SJT <Icon name='arrow right' />
+                        Circumstances <Icon name='arrow right' />
                     </Button.Content>
                 </Button>
             </Form>
@@ -55,4 +53,4 @@ class CircumstancesDetails extends Component{
     }
 }
 
-export default CircumstancesDetails;
+export default PublicationsDetails;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'semantic-ui-react';
+import { Form, Button, Progress, Icon } from 'semantic-ui-react';
 import UniData from '../data/2019medschools.json';
 
 class PersonalDetails extends Component{
@@ -24,21 +24,35 @@ class PersonalDetails extends Component{
 
     render(){
         const {values: { university }} = this.props;
-        const { values } = this.props
         return(
-        <Form color='blue' >
-            <h1 className="ui centered">Enter Personal Details</h1>
-            <Form.Field>
-                <label>University</label>
-                <select
-                    onChange={this.props.handleChange('university')}
-                    defaultValue={values.university}
-                >
-                    {this.renderUniversities(university)}
-                </select>
-            </Form.Field>
-            <Button onClick={this.back}>Back</Button>
-            <Button onClick={this.saveAndContinue}>Save And Continue </Button>
+        <Form className="calculatorForm">
+            <Progress percent={83} active />
+            <div className="question">
+                <p>Which university do you want your SJT scores to be predicted against?</p>
+
+                <img src={process.env.PUBLIC_URL + "/img/uk.png"} height="200px" alt="uk"/>
+
+                <Form.Field>
+                    <label>University</label>
+                    <select
+                        onChange={this.props.handleChange('university')}
+                    >
+                        {this.renderUniversities(university)}
+                    </select>
+                </Form.Field>
+            </div>
+            <Button onClick={this.back} className="formBtn" animated>
+                    <Button.Content visible>Back</Button.Content>
+                    <Button.Content hidden>
+                        <Icon name='arrow left' />
+                    </Button.Content>
+                </Button>
+            <Button onClick={this.saveAndContinue} className="formBtn" animated>
+                    <Button.Content visible>Complete Form</Button.Content>
+                    <Button.Content hidden>
+                        <Icon name='arrow right' />
+                    </Button.Content>
+                </Button>
         </Form>
         )
     }

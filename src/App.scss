@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap');
+
+// Colors
+$background-color: #d2dae2;
+$primary-color: #182C61;
+$secondary-color: #1B9CFC;
+$table-color: #222f3e;
+
+$light-gray: #c8d6e5;
+$dark-gray: #8395a7;
+
+$false-primary: #ff6b6b;
+$false-secondary: #9E1313;
+$true-primary: #1dd1a1;
+$true-secondary: #097457;
+$avg-primary: #ffc061;
+$avg-secondary: #6e3601;
+
+$messly: #df3e3b;
+
+// Global Stuff
+body {
+  background-color: $background-color;
+  font-family: 'Quicksand', sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12pt;
+  color: #fff;
+  line-height: 20pt;
+}
+
+strong {
+  font-weight: 700;
+}
+
+// Semantic UI Overrides
+.ui.progress .bar {
+  background: $secondary-color;
+}
+
+.ui.button {
+  background-color: $light-gray;
+} 
+
+.ui.active.button {
+  background: $secondary-color;
+  color: #fff;
+}
+
+.ui.buttons .or::before {
+  color: $dark-gray;
+}
+
+// Header
+.header {
+  background-color: $primary-color;
+
+  .right {
+    float: right;
+  }
+
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15pt;
+    padding: 15px 0;
+    margin: 0;
+  }
+  
+  a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 10pt;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $primary-color;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    border-bottom: 1px solid #fff;
+  }
+
+}
+
+// Calculator Form
+.calculatorForm {
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 30px 50px;
+  
+  p {
+    color: #000;
+    padding-bottom: 15px;
+  }
+
+  .question {
+    border: 1px solid #c8d6e5;
+    border-radius: 5px;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+
+    img {
+      padding-bottom: 20px;
+    }
+
+    select {
+      border: 1px solid $secondary-color;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]+label { 
+      p {
+        font-size: 10pt;
+        line-height: 14pt;
+        text-align: left;
+        border-left: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+        margin: 0;
+        padding: 0 30px;
+        cursor: pointer;
+      }
+
+      p:first-child {
+        border-top: 1px solid $light-gray;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding-top: 10px;
+      }
+
+      p:last-child {
+        border-bottom: 1px solid $light-gray;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      .points {
+        float: right;
+        font-size: 11pt;
+        opacity: 0.6;
+        font-weight: 700;
+        position: relative;
+      }
+    } 
+
+    input[type="radio"]:checked +label { 
+      p {
+        border-left: 2px solid $secondary-color;
+        border-right: 2px solid $secondary-color;
+      }
+      p:first-child {
+        border-top: 2px solid $secondary-color;
+      }
+      p:last-child {
+        border-bottom: 2px solid $secondary-color;
+      }
+    } 
+
+  }
+
+  .formBtn {
+    background-color: $light-gray;
+    transition: 0.3s;  
+  }
+  .formBtn:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+}
+.calculatorForm.success {
+  border-top: 5px solid $true-primary;
+  padding: 15px 40px;
+
+  p {
+    text-align: left;
+    padding: 0;
+  }
+
+  .formBtn {
+    float: right;
+    position: relative;
+    top: -31px;
+  }
+
+}
+
+// User Data
+.userData {
+  background-color: $primary-color;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+}
+
+.userDataSummary {
+  background-color: #341f97;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+}
+
+// Table
+.ui.table {
+
+  .Likely {
+    background-color: $true-primary;
+    color: $true-secondary;
+  }
+
+  .Unlikely {
+    background-color: $false-primary;
+    color: $false-secondary
+  }
+
+  .Average {
+    background-color: $avg-primary;
+    color: $avg-secondary;
+  }
+
+  thead {
+    tr th {
+      background-color: $table-color;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 12pt;
+    }
+    tr:first-child>th:first-child {
+      border-top-left-radius: 10px;
+    }
+    tr:first-child>th:last-child {
+      border-top-right-radius: 10px;
+      text-align: center;
+    }
+  }
+
+  td {
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 12pt;
+  }
+
+  td:first-child {
+    font-weight: 600;
+  }
+
+  td:nth-child(3), td:first-child, td:nth-child(2) {;
+
+    .Unlikely {
+      color: $false-primary;
+      background-color: #fff;
+    }
+
+    .Likely {
+      color: $true-secondary;
+      background-color: #fff;
+    }
+
+    .Average {
+      background-color: #fff;
+      color: #000;
+    }
+  
+    .Unlikely span, .Likely span {
+      font-size: 9pt;
+      position: relative;
+      top: -5px;
+      left: 5px;
+      font-weight: 600;
+    }
+
+  }
+
+  td:last-child {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11pt;
+    font-weight: 600;
+  }
+
+}
+
+// messly
+.messly {
+  text-transform: none !important;
+  border-top: 2px solid $messly !important;
+
+  p {
+    color: #000;
+    font-size: 10pt;
+  }
+
+  strong {
+    color: $messly;
+  }
+
+  .start {
+    background-color: $messly;
+    color: #fff;
+    padding: 7px 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+
+}
+
+// Disclaimer
+.disclaimer {
+  margin: 50px 0;
+
+  p {
+    color: #000;
+    font-size: 10pt;
+    font-weight: 600;
+  }
+
+}
+
+// Footer
+.footer {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+
+  button {
+    background: $dark-gray !important;
+    color: $background-color !important;
+  }
+  button:hover {
+    background: $false-primary !important;
+    color: #fff !important;
+  }
+}
