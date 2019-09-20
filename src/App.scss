@@ -364,6 +364,11 @@ strong {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .ui.table thead {
+    display: none !important;
+  }
+
   .ui.table tr {
 
     td:first-child {
