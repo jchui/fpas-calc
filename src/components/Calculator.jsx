@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Responsive, Segment } from 'semantic-ui-react';
 import UoAData from '../data/2019uoa.json';
 import UniData from '../data/2019medschools.json';
 
@@ -103,14 +103,16 @@ class Calculator extends Component{
                 {this.renderCalculations(epm, qualifications, publications, specialcircumstances, university)}
 
                 <Table celled>
-                    <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>Unit of Application</Table.HeaderCell>
-                        <Table.HeaderCell>Places</Table.HeaderCell>
-                        <Table.HeaderCell>Lowest Allocated Score in 2019</Table.HeaderCell>
-                        <Table.HeaderCell>Probability</Table.HeaderCell>
-                    </Table.Row>
-                    </Table.Header>
+                    <Responsive as={Segment} minWidth={767}>
+                        <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Unit of Application</Table.HeaderCell>
+                            <Table.HeaderCell>Places</Table.HeaderCell>
+                            <Table.HeaderCell>Lowest Allocated Score in 2019</Table.HeaderCell>
+                            <Table.HeaderCell>Probability</Table.HeaderCell>
+                        </Table.Row>
+                        </Table.Header>
+                    </Responsive>
                     <Table.Body>
                         {this.renderTableData(epm, qualifications, publications, specialcircumstances, university)}
 

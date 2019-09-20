@@ -157,10 +157,25 @@ strong {
       }
     } 
 
+    input[type="radio"]+label:hover {
+      p {
+        border-left: 2px solid $secondary-color;
+        border-right: 2px solid $secondary-color;
+      }
+      p:first-child {
+        border-top: 2px solid $secondary-color;
+      }
+      p:last-child {
+        border-bottom: 2px solid $secondary-color;
+      }
+    }
+
     input[type="radio"]:checked +label { 
       p {
         border-left: 2px solid $secondary-color;
         border-right: 2px solid $secondary-color;
+        background-color: $secondary-color;
+        color: #fff;
       }
       p:first-child {
         border-top: 2px solid $secondary-color;
@@ -345,5 +360,37 @@ strong {
   button:hover {
     background: $false-primary !important;
     color: #fff !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.table tr {
+
+    td:first-child {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    td:nth-child(3) {
+      text-align: center;
+    }
+
+    .Unlikely span, .Likely span {
+      display: none;
+    }
+
+    td:nth-child(2) {
+      display: none !important;
+    }
+  }
+  
+  input[type="radio"]+label { 
+    p {
+      padding: 10px 15px !important;
+    }
+  }
+
+  .points {
+    display: none;
   }
 }
