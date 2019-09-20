@@ -36,6 +36,7 @@ class PersonalDetails extends Component{
                     <label>University</label>
                     <select
                         onChange={this.props.handleChange('university')}
+                        defaultValue={university}
                     >
                         {this.renderUniversities(university)}
                     </select>
