@@ -10,7 +10,7 @@ function handleMesslyClick() {
       action: 'Redirect to messly'
     });
     window.location.assign('http://messly.co.uk/training.html?ref=jchui');
-  }
+}
 
 class Calculator extends Component{
     saveAndContinue = (e) => {

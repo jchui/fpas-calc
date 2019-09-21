@@ -11,6 +11,14 @@ function initializeReactGA() {
 
 initializeReactGA();
 
+function handleWebClick() {
+    ReactGA.event({
+      category: 'User',
+      action: 'Redirect to JChui.me'
+    });
+    window.location.assign('https://jchui.me');
+}
+
 class App extends Component {
     render() {
         return (
@@ -25,14 +33,12 @@ class App extends Component {
                   <MainForm />
               </Container>
               <div className="footer">
-                <a href="https://jchui.me">
-                <Button animated="fade">
+                <Button animated="fade" onClick={handleWebClick}>
                       <Button.Content visible>Built by Jeremy Chui.</Button.Content>
                       <Button.Content hidden>
                           <Icon name='heart' />
                       </Button.Content>
                   </Button>
-                  </a>
               </div>
             </div>
         );
