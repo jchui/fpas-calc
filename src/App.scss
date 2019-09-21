@@ -4,6 +4,7 @@
 $background-color: #d2dae2;
 $primary-color: #182C61;
 $secondary-color: #1B9CFC;
+$secondary-color-light: #AFDDFF;
 $table-color: #222f3e;
 
 $light-gray: #c8d6e5;
@@ -44,15 +45,29 @@ strong {
 
 .ui.button {
   background-color: $light-gray;
-} 
+}
 
 .ui.active.button {
   background: $secondary-color;
   color: #fff;
 }
 
+.ui.button:hover, .ui.active.button:hover {
+  background: $secondary-color-light;
+  border-left: 2px;
+}
+
 .ui.buttons .or::before {
   color: $dark-gray;
+}
+
+.ui.table {
+  border: 0;
+  background-color: inherit;
+}
+
+.ui.celled.table tr td {
+  background-color: #fff;
 }
 
 // Header
@@ -67,17 +82,17 @@ strong {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
     color: #fff;
-    font-size: 15pt;
+    font-size: 12pt;
     padding: 15px 0;
     margin: 0;
   }
-  
+
   a {
     margin: 0;
     padding: 0;
     color: #fff;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 16px;
     font-weight: 500;
     font-size: 10pt;
     padding-bottom: 1px;
@@ -97,7 +112,7 @@ strong {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 30px 50px;
-  
+
   p {
     color: #000;
     padding-bottom: 15px;
@@ -121,7 +136,7 @@ strong {
       display: none;
     }
 
-    input[type="radio"]+label { 
+    input[type="radio"]+label {
       p {
         font-size: 10pt;
         line-height: 14pt;
@@ -151,12 +166,11 @@ strong {
 
       .points {
         float: right;
-        font-size: 11pt;
         opacity: 0.6;
-        font-weight: 700;
+        font-weight: 600;
         position: relative;
       }
-    } 
+    }
 
     input[type="radio"]+label:hover {
       p {
@@ -175,7 +189,7 @@ strong {
       }
     }
 
-    input[type="radio"]:checked +label { 
+    input[type="radio"]:checked +label {
       p {
         border-left: 2px solid $secondary-color;
         border-right: 2px solid $secondary-color;
@@ -192,13 +206,13 @@ strong {
         border-bottom: 2px solid $secondary-color;
         padding-bottom: 10px;
       }
-    } 
+    }
 
   }
 
   .formBtn {
     background-color: $light-gray;
-    transition: 0.3s;  
+    transition: 0.3s;
   }
   .formBtn:hover {
     background-color: $secondary-color;
@@ -243,17 +257,17 @@ strong {
 // Table
 .ui.table {
 
-  .Likely {
+  td:last-child.Likely {
     background-color: $true-primary;
     color: $true-secondary;
   }
 
-  .Unlikely {
+  td:last-child.Unlikely {
     background-color: $false-primary;
     color: $false-secondary
   }
 
-  .Average {
+  td:last-child.Average {
     background-color: $avg-primary;
     color: $avg-secondary;
   }
@@ -284,7 +298,7 @@ strong {
     font-weight: 600;
   }
 
-  td:nth-child(3), td:first-child, td:nth-child(2) {;
+  td:nth-child(3), td:first-child, td:nth-child(2) {
 
     .Unlikely {
       color: $false-primary;
@@ -292,7 +306,7 @@ strong {
     }
 
     .Likely {
-      color: $true-secondary;
+      color: $true-primary;
       background-color: #fff;
     }
 
@@ -300,7 +314,7 @@ strong {
       background-color: #fff;
       color: #000;
     }
-  
+
     .Unlikely span, .Likely span {
       font-size: 9pt;
       position: relative;
@@ -397,8 +411,8 @@ strong {
       display: none !important;
     }
   }
-  
-  input[type="radio"]+label { 
+
+  input[type="radio"]+label {
     p {
       padding: 10px 15px !important;
     }
@@ -407,4 +421,24 @@ strong {
   .points {
     display: none;
   }
+
+  .calculatorForm.success {
+
+    .formBtn {
+      text-align: center;
+      float: none;
+      top: 5px;
+    }
+  }
+
+  .start {
+    display: block;
+  }
+
+  .ui.table:not(.unstackable) tr {
+    box-shadow: none;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
 }

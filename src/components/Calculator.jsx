@@ -31,7 +31,7 @@ class Calculator extends Component{
                 allocatedDisplay = specialcircumstances ? allocatedsc: allocated;
             }
             allocatedDisplay = allocatedDisplay.toFixed(2);
-            
+
 
             const lowestScore = epm + qualifications + publications + meanSJT - sdSJT;
             const highestScore = epm + qualifications + publications + meanSJT + sdSJT;
@@ -79,7 +79,7 @@ class Calculator extends Component{
                     <p>
                         You currently have
                         <strong> {epm} points</strong> from your performance at university
-                        {((qualifications + publications) > 0 ) ? 
+                        {((qualifications + publications) > 0 ) ?
                             <span> + <strong> {qualifications + publications} points</strong> from additional degrees and publications.</span>
                             : "."}
                     </p>
@@ -118,7 +118,7 @@ class Calculator extends Component{
                                 <Table.Cell colSpan={4} className="messly">
                                     <a href="http://messly.co.uk/training.html?ref=jchui">
                                     <center>
-                                    <p>Want to learn more? We've partnered with <strong>messly</strong> for peer reviews, GMC ratings, and other essential information on the Foundation Programme. 
+                                    <p>Want to learn more? We've partnered with <strong>messly</strong> for peer reviews, GMC ratings, and other essential information on the Foundation Programme.
                                         <span className="start">Get Started</span></p>
                                     </center>
                                     </a>

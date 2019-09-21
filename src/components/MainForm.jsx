@@ -24,6 +24,7 @@ class MainForm extends Component {
         this.setState({
             step : step + 1
         })
+        window.scrollTo(0, 0)
     }
 
     prevStep = () => {
@@ -31,9 +32,10 @@ class MainForm extends Component {
         this.setState({
             step : step - 1
         })
+        window.scrollTo(0, 0)
     }
 
-    handleChange = input => e => {      
+    handleChange = input => e => {
         if (input === 'epm') {
             this.setState({ [input]:  parseInt(e.target.value) });
         } else {
@@ -50,8 +52,8 @@ class MainForm extends Component {
         case 1:
             return (
                 <div>
-                    <EPMDetails 
-                        nextStep={this.nextStep} 
+                    <EPMDetails
+                        nextStep={this.nextStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
@@ -63,9 +65,9 @@ class MainForm extends Component {
         case 2:
             return (
                 <div>
-                    <QualificationsDetails 
+                    <QualificationsDetails
                         nextStep={this.nextStep}
-                        prevStep={this.prevStep}  
+                        prevStep={this.prevStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
@@ -77,9 +79,9 @@ class MainForm extends Component {
         case 3:
             return (
                 <div>
-                    <PublicationsDetails 
+                    <PublicationsDetails
                         nextStep={this.nextStep}
-                        prevStep={this.prevStep}  
+                        prevStep={this.prevStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
@@ -91,9 +93,9 @@ class MainForm extends Component {
         case 4:
             return (
                 <div>
-                    <CircumstancesDetails 
+                    <CircumstancesDetails
                         nextStep={this.nextStep}
-                        prevStep={this.prevStep}  
+                        prevStep={this.prevStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
@@ -105,9 +107,9 @@ class MainForm extends Component {
         case 5:
             return (
                 <div>
-                    <PersonalDetails 
+                    <PersonalDetails
                         nextStep={this.nextStep}
-                        prevStep={this.prevStep}  
+                        prevStep={this.prevStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
@@ -119,8 +121,8 @@ class MainForm extends Component {
         case 6:
             return (
                 <div>
-                    <Success 
-                        prevStep={this.prevStep}  
+                    <Success
+                        prevStep={this.prevStep}
                         handleChange = {this.handleChange}
                         values={values}
                         />
