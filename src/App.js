@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './App.scss';
 import { Container, Button, Icon } from 'semantic-ui-react';
 import MainForm from './components/MainForm';
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+    ReactGA.initialize('UA-24142610-17');
+    ReactGA.pageview('auto');
+}
+
+initializeReactGA();
 
 class App extends Component {
     render() {

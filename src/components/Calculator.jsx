@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Table } from 'semantic-ui-react';
 import UoAData from '../data/2019uoa.json';
 import UniData from '../data/2019medschools.json';
+import ReactGA from 'react-ga';
+
+function handleMesslyClick() {
+    ReactGA.event({
+      category: 'User',
+      action: 'Redirect to messly'
+    });
+    window.location.assign('http://messly.co.uk/training.html?ref=jchui');
+  }
 
 class Calculator extends Component{
     saveAndContinue = (e) => {
@@ -15,6 +24,12 @@ class Calculator extends Component{
     }
 
     renderTableData(epm, qualifications, publications, specialcircumstances, university) {
+
+    ReactGA.event({
+      category: 'User',
+      action: 'Calculate FPAS Results'
+    });
+
         return UoAData.map((uoas, index) => {
             const { uoa, places, allocated, allocatedsc } = uoas;
 
@@ -116,12 +131,13 @@ class Calculator extends Component{
 
                         <Table.Row key="messly">
                                 <Table.Cell colSpan={4} className="messly">
-                                    <a href="http://messly.co.uk/training.html?ref=jchui">
                                     <center>
-                                    <p>Want to learn more? We've partnered with <strong>messly</strong> for peer reviews, GMC ratings, and other essential information on the Foundation Programme.
-                                        <span className="start">Get Started</span></p>
+                                    <p
+                                      onClick={handleMesslyClick}>
+                                      Want to learn more? We've partnered with <strong>messly</strong> for peer reviews, GMC ratings, and other essential information on the Foundation Programme.
+                                      <span className="start">Get Started</span>
+                                    </p>
                                     </center>
-                                    </a>
                                 </Table.Cell>
                         </Table.Row>
                     </Table.Body>
