@@ -25,7 +25,7 @@ class PublicationsDetails extends Component{
             <Form className="calculatorForm">
                 <Progress percent={50} active />
                 <div className="question">
-                    <p>Do you have any publications? (2 points)</p>
+                    <p>Do you have any publications? (Up to 2 points)</p>
                     <img src={process.env.PUBLIC_URL + "/img/take_a_note_2.png"} height="200px" alt="report"/>
                     <br/>
                     <div className="radios">
