@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import preval from 'preval.macro';
 import { Table } from 'semantic-ui-react';
 import UoAData from '../data/2019uoa.json';
 import UniData from '../data/2019medschools.json';
@@ -112,6 +113,7 @@ class Calculator extends Component{
 
     render(){
         const {values: { epm, qualifications, publications, specialcircumstances, university }} = this.props;
+        const dateTimeStamp = preval`module.exports = new Date().toLocaleString();`
         return(
             <div>
 
@@ -147,6 +149,8 @@ class Calculator extends Component{
                     <p>Information on this page was sourced from <a href="https://www.foundationprogramme.nhs.uk/sites/default/files/2019-06/2019%20Recruitment%20Stats%20and%20Facts%20Report_FINAL.pdf">Foundation Programme 2019 Recruitment Stats and Facts.</a></p>
                     <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
                     <p>All the best with your applications!</p>
+                    <br/>
+                    <p>Build: {dateTimeStamp}</p>
                 </div>
 
             </div>
