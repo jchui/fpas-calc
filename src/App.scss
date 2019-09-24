@@ -394,6 +394,10 @@ strong {
         color: $dark-gray;
         font-weight: 700;
       }
+
+      a:hover {
+        color: $secondary-color;
+      }
     }
   }
 
