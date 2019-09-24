@@ -20,7 +20,6 @@ class PublicationsDetails extends Component{
     }
 
     render(){
-        const { values } = this.props;
         return(
             <Form className="calculatorForm">
                 <Progress percent={50} active />

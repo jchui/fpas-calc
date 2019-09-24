@@ -152,7 +152,11 @@ class Calculator extends Component{
                     <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
                     <p>All the best with your applications!</p>
                     <br/>
-                    <p>Build: {buildTimestamp}</p>
+                    <div className="build">
+                      <p>Build: <strong>{buildTimestamp}</strong></p>
+                      <p>UoA Data: <a href={'/data/2019uoa.json'} download>Download JSON</a></p>
+                      <p>Univeristy Data: <a href={'/data/2019medschools.json'} download>Download JSON</a></p>
+                    </div>
                 </div>
 
             </div>
