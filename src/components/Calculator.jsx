@@ -4,6 +4,7 @@ import { Table } from 'semantic-ui-react';
 import UoAData from '../data/2019uoa.json';
 import UniData from '../data/2019medschools.json';
 import ReactGA from 'react-ga';
+import moment from 'moment';
 
 function handleMesslyClick() {
     ReactGA.event({
@@ -113,7 +114,8 @@ class Calculator extends Component{
 
     render(){
         const {values: { epm, qualifications, publications, specialcircumstances, university }} = this.props;
-        const dateTimeStamp = preval`module.exports = new Date().toLocaleString();`
+        const buildTime = preval`module.exports = new Date();`
+        const buildTimestamp = moment(buildTime).format("DDMMYY:HHmm");
         return(
             <div>
 
@@ -150,7 +152,7 @@ class Calculator extends Component{
                     <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
                     <p>All the best with your applications!</p>
                     <br/>
-                    <p>Build: {dateTimeStamp}</p>
+                    <p>Build: {buildTimestamp}</p>
                 </div>
 
             </div>
