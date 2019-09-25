@@ -16,7 +16,8 @@ class MainForm extends Component {
         publications: 0,
         specialcircumstances: false,
         university: 'Overall Applicants (2019)',
-        email: ''
+        email: '',
+        sort: false,
     }
 
     nextStep = () => {
@@ -35,19 +36,30 @@ class MainForm extends Component {
         window.scrollTo(0, 0)
     }
 
+    str2bool(value) {
+      if (value && typeof value === 'string') {
+        if (value.toLowerCase() === "true") return true;
+        if (value.toLowerCase() === "false") return false;
+      }
+      return value;
+    }
+
     handleChange = input => e => {
         if (input === 'epm') {
             this.setState({ [input]:  parseInt(e.target.value) });
         } else {
             this.setState({ [input]: e.target.type !== 'select-one' ? parseInt(e.target.value) : e.target.value });
         }
+    }
 
+    handleSort = input => e => {
+        this.setState({ [input]:  this.str2bool(e.target.value) });
     }
 
     render(){
         const {step} = this.state;
-        const { epm, qualifications, publications, specialcircumstances, university, email } = this.state;
-        const values = { epm, qualifications, publications, specialcircumstances, university, email };
+        const { epm, qualifications, publications, specialcircumstances, university, email, sort } = this.state;
+        const values = { epm, qualifications, publications, specialcircumstances, university, email, sort };
         switch(step) {
         case 1:
             return (
@@ -58,6 +70,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>
@@ -72,6 +85,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>
@@ -86,6 +100,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>
@@ -100,6 +115,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>
@@ -114,6 +130,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>
@@ -127,6 +144,7 @@ class MainForm extends Component {
                         values={values}
                         />
                     <Calculator
+                        handleSort = {this.handleSort}
                         values={values}
                         />
                 </div>

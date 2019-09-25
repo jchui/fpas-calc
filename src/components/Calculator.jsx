@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import preval from 'preval.macro';
-import { Table } from 'semantic-ui-react';
+import { Table, Button } from 'semantic-ui-react';
 import UoAData from '../data/2019uoa.json';
 import UniData from '../data/2019medschools.json';
 import ReactGA from 'react-ga';
@@ -15,6 +15,7 @@ function handleMesslyClick() {
 }
 
 class Calculator extends Component{
+
     saveAndContinue = (e) => {
         e.preventDefault();
         this.props.nextStep();
@@ -26,65 +27,83 @@ class Calculator extends Component{
     }
 
     renderTableData(epm, qualifications, publications, specialcircumstances, university) {
+      let arr = [];
+      let uniInfo = UniData.filter(function(value){
+          return value.university === university;
+      });
 
-    ReactGA.event({
-      category: 'User',
-      action: 'Calculate FPAS Results'
-    });
+      const meanSJT = uniInfo[0].avg;
+      const sdSJT = uniInfo[0].sd;
+      const minScore = epm + qualifications + publications + meanSJT - sdSJT;
+      const maxScore = epm + qualifications + publications + meanSJT + sdSJT;
 
-        return UoAData.map((uoas, index) => {
-            const { uoa, places, allocated, allocatedsc } = uoas;
+      Object.keys(UoAData).forEach(function(key) {
+        let tempList = [];
 
-            let uniInfo = UniData.filter(function(value){
-                return value.university === university;
-            });
-            const meanSJT = uniInfo[0].avg;
-            const sdSJT = uniInfo[0].sd;
+        const uoa = UoAData[key]["uoa"];
+        const places = UoAData[key]["places"];
+        const allocated = (specialcircumstances === 1 && !!(UoAData[key]["allocatedsc"])) ?
+          UoAData[key]["allocatedsc"] :
+          UoAData[key]["allocated"];
 
-            let allocatedDisplay;
-            if (!allocatedsc) {
-                allocatedDisplay = allocated;
-            } else {
-                allocatedDisplay = specialcircumstances ? allocatedsc: allocated;
-            }
-            allocatedDisplay = allocatedDisplay.toFixed(2);
+        let score;
+        let probability;
 
+        if (minScore > allocated) {
+          score = minScore - allocated;
+          probability = "Likely";
+        } else if (maxScore < allocated) {
+          score = maxScore - allocated;
+          probability = "Unlikely";
+        } else {
+          score = 0;
+          probability = "Average";
+        }
 
-            const lowestScore = epm + qualifications + publications + meanSJT - sdSJT;
-            const highestScore = epm + qualifications + publications + meanSJT + sdSJT;
-            let probability;
-            let probabilityDisplay;
+        tempList.push(uoa);
+        tempList.push(places);
+        tempList.push(allocated);
+        tempList.push(score);
+        tempList.push(probability);
 
-            if (highestScore < allocatedDisplay) {
-                probability = "Unlikely";
-                probabilityDisplay = "-" + (allocatedDisplay - highestScore).toFixed(2) + " from predicted score (" + highestScore.toFixed(2) + ")";
-            } else if (lowestScore > allocatedDisplay) {
-                probability = "Likely";
-                probabilityDisplay = "+" + (lowestScore - allocatedDisplay).toFixed(2) + " from predicted score (" + lowestScore.toFixed(2) + ")";
-            } else {
-                probability = "Average";
-            }
+        arr.push(tempList);
+      });
 
-            return (
-                <Table.Row key={uoa}>
-                    <Table.Cell><span className={probability}>{uoa}</span></Table.Cell>
-                    <Table.Cell><span className={probability}>{places}</span></Table.Cell>
-                    <Table.Cell>
-                        <span className={probability}>
-                        {allocatedDisplay}
-                            <span>{probabilityDisplay}</span>
-                        </span>
-                        </Table.Cell>
-                    <Table.Cell className={probability}>{probability}</Table.Cell>
-                </Table.Row>
-            )
-        })
+      return arr;
+    }
+
+    renderTable(tableData, sort) {
+
+      ReactGA.event({
+        category: 'User',
+        action: 'Calculate FPAS Results'
+      });
+
+      const outputData = sort ?
+      tableData.sort((a, b) => (a[3] > b[3]) ? -1 : 1 ) :
+      tableData.sort((a, b) => (a[0] > b[0]) ? 1 : -1 );
+
+      return outputData.map((uoa, index) =>
+        <Table.Row key={outputData[index][0]}>
+            <Table.Cell><span className={outputData[index][4]}>{outputData[index][0]}</span></Table.Cell>
+            <Table.Cell><span className={outputData[index][4]}>{outputData[index][1]}</span></Table.Cell>
+            <Table.Cell>
+                <span className={outputData[index][4]}>
+                {outputData[index][2].toFixed(2)}
+                    <span>{outputData[index][3].toFixed(2)} points from predicted score</span>
+                </span>
+                </Table.Cell>
+            <Table.Cell className={outputData[index][4]}>{outputData[index][4]}</Table.Cell>
+        </Table.Row>
+      );
+
      }
 
      renderCalculations(epm, qualifications, publications, specialcircumstances, university) {
         let uniInfo = UniData.filter(function(value){
             return value.university === university;
         });
+        const { values } = this.props;
         const meanSJT = uniInfo[0].avg;
         const sdSJT = uniInfo[0].sd;
         const lowestScore = (epm + qualifications + publications + meanSJT - sdSJT).toFixed(2);
@@ -108,14 +127,33 @@ class Calculator extends Component{
                 <div className="userDataSummary">
                     <p>This means that statistically you have a <strong>68.27% chance</strong> of scoring between <strong>{lowestScore} - {highestScore}</strong> on your application.</p>
                 </div>
+                <div className="tableSort">
+                  <p>Currently sorting results: </p>
+                  <Button.Group size='large'>
+                      <Button
+                          value={false}
+                          onClick={this.props.handleSort('sort')}
+                          active={!values.sort ? true : false}
+                      >UoA (Alphabetically)</Button>
+                      <Button.Or />
+                      <Button
+                          value={true}
+                          onClick={this.props.handleSort('sort')}
+                          active={!values.sort ? false : true}
+                      >Probability</Button>
+                  </Button.Group>
+                </div>
             </div>
         )
      }
 
     render(){
-        const {values: { epm, qualifications, publications, specialcircumstances, university }} = this.props;
+        const {values: { epm, qualifications, publications, specialcircumstances, university, sort }} = this.props;
         const buildTime = preval`module.exports = new Date();`
         const buildTimestamp = moment(buildTime).format("DDMMYY:HHmm");
+
+        const tableData = this.renderTableData(epm, qualifications, publications, specialcircumstances, university);
+
         return(
             <div>
 
@@ -131,7 +169,7 @@ class Calculator extends Component{
                     </Table.Row>
                     </Table.Header>
                     <Table.Body>
-                        {this.renderTableData(epm, qualifications, publications, specialcircumstances, university)}
+                        {this.renderTable(tableData, sort)}
 
                         <Table.Row key="messly">
                                 <Table.Cell colSpan={4} className="messly">
