@@ -187,7 +187,6 @@ class Calculator extends Component{
 
                 <div className="disclaimer">
                     <p>Information on this page was sourced from <a href={'/data/2019 Recruitment Stats and Facts Report.pdf'}>Foundation Programme 2019 Recruitment Stats and Facts.</a> </p>
-                    <p>Please note that UKFPO has since removed the document but the cached file can be found from the link above.<br/><br/></p>
                     <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
                     <p>All the best with your applications!</p>
                     <br/>
