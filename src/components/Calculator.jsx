@@ -187,14 +187,18 @@ class Calculator extends Component{
 
                 <div className="disclaimer">
                     <p>Information on this page was sourced from <a href={process.env.PUBLIC_URL + "/data/2019 Recruitment Stats and Facts Report.pdf"}>Foundation Programme 2019 Recruitment Stats and Facts.</a> </p>
-                    <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
-                    <p>All the best with your applications!</p>
+                    <p>Some information and stats may change as per UKFPO.</p>
                     <br/>
+
                     <div className="build">
                       <p>Build: <strong>{buildTimestamp}</strong></p>
                       <p>UoA Data: <a href={process.env.PUBLIC_URL + "/data/2019uoa.json"} download>Download JSON</a></p>
                       <p>Univeristy Data: <a href={process.env.PUBLIC_URL + "/data/2019medschools.json"} download>Download JSON</a></p>
                     </div>
+
+                    <br/>
+                    <p>We try to keep this as up to date as possible, but do double check all content before applying as not all errors may have been reported.</p>
+                    <p>All the best with your applications!</p>
                 </div>
 
             </div>
