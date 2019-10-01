@@ -187,14 +187,22 @@ class Calculator extends Component{
 
                 <div className="disclaimer">
                     <p>Information on this page was sourced from <a href={process.env.PUBLIC_URL + "/data/2019 Recruitment Stats and Facts Report.pdf"}>Foundation Programme 2019 Recruitment Stats and Facts.</a> </p>
-                    <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
-                    <p>All the best with your applications!</p>
                     <br/>
+                    <p className="notice">Severn score updated from <a href="https://webcache.googleusercontent.com/search?q=cache:DVyOEytdhjUJ:https://www.foundationprogramme.nhs.uk/sites/default/files/2019-06/2019%2520Recruitment%2520Stats%2520and%2520Facts%2520Report_FINAL.pdf+&cd=1&hl=en&ct=clnk&gl=uk">74.358</a> to 81.67.<br/><small>Update 01/10/19</small></p>
+                    <br/>
+                    <p>UKFPO have previously released incorrect allocation scores on their Recruitment Stats & Facts Report.</p>
+                    <p>When in doubt, please check directly with the deaneries you are applying to.</p>
+                    <br/>
+
                     <div className="build">
                       <p>Build: <strong>{buildTimestamp}</strong></p>
                       <p>UoA Data: <a href={process.env.PUBLIC_URL + "/data/2019uoa.json"} download>Download JSON</a></p>
                       <p>Univeristy Data: <a href={process.env.PUBLIC_URL + "/data/2019medschools.json"} download>Download JSON</a></p>
                     </div>
+
+                    <br/>
+                    <p>We try to keep this as up to date as possible, but do double check all content before applying as not all errors may have been reported.</p>
+                    <p>All the best with your applications!</p>
                 </div>
 
             </div>
