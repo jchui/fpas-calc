@@ -186,7 +186,8 @@ class Calculator extends Component{
                 </Table>
 
                 <div className="disclaimer">
-                    <p>Information on this page was sourced from <a href="https://www.foundationprogramme.nhs.uk/sites/default/files/2019-06/2019%20Recruitment%20Stats%20and%20Facts%20Report_FINAL.pdf">Foundation Programme 2019 Recruitment Stats and Facts.</a></p>
+                    <p>Information on this page was sourced from <a href={'/data/2019 Recruitment Stats and Facts Report.pdf'}>Foundation Programme 2019 Recruitment Stats and Facts.</a> </p>
+                    <p>Please note that UKFPO has since removed the document but the cached file can be found from the link above.<br/><br/></p>
                     <p>Please ensure that you double check all content before applying as not all errors may have been reported.</p>
                     <p>All the best with your applications!</p>
                     <br/>
