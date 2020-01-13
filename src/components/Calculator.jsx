@@ -80,7 +80,7 @@ class Calculator extends Component{
       });
 
       const outputData = sort ?
-      tableData.sort((a, b) => (a[3] > b[3]) ? -1 : 1 ) :
+      tableData.sort((a, b) => (a[2] > b[2]) ? 1 : -1 ) :
       tableData.sort((a, b) => (a[0] > b[0]) ? 1 : -1 );
 
       return outputData.map((uoa, index) =>
