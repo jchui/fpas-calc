@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Progress, Icon } from 'semantic-ui-react';
-import UniData from '../data/2019medschools.json';
+import UniData from '../data/2020medschools.json';
 
 class PersonalDetails extends Component{
     saveAndContinue = (e) => {

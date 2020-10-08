@@ -1,0 +1,122 @@
+[
+    {
+      "uoa": "East Anglia",
+      "places": 257,
+      "allocated": 72.936,
+      "allocatedsc": 71.240
+    },
+    {
+      "uoa": "EBH",
+      "places": 276,
+      "allocated": 77.428,
+      "allocatedsc": 70.502
+    },
+    {
+      "uoa": "LNR",
+      "places": 145,
+      "allocated": 72.612,
+      "allocatedsc": 70.434
+    },
+    {
+      "uoa": "North Central and East London",
+      "places": 330,
+      "allocated": 84.330,
+      "allocatedsc": 69.640
+    },
+    {
+      "uoa": "North West London",
+      "places": 233,
+      "allocated": 85.167,
+      "allocatedsc": 72.538
+    },
+    {
+      "uoa": "North West of England",
+      "places": 782,
+      "allocated": 74.334,
+      "allocatedsc": 69.040
+    },
+    {
+      "uoa": "Northern",
+      "places": 351,
+      "allocated": 71.639,
+      "allocatedsc": 70.358
+    },
+    {
+      "uoa": "Nothern Ireland",
+      "places": 240,
+      "allocated": 68.856,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "Oxford",
+      "places": 209,
+      "allocated": 79.538,
+      "allocatedsc": 72.890
+    },
+    {
+      "uoa": "Peninsula",
+      "places": 187,
+      "allocated": 70.506,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "Scotland",
+      "places": 779,
+      "allocated": 70.371,
+      "allocatedsc": 69.448
+    },
+    {
+      "uoa": "Severn",
+      "places": 264,
+      "allocated": 80.010,
+      "allocatedsc": 75.391
+    },
+    {
+      "uoa": "South Thames",
+      "places": 766,
+      "allocated": 78.165,
+      "allocatedsc": 69.547
+    },
+    {
+      "uoa": "Trent",
+      "places": 271,
+      "allocated": 69.527,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "Wales",
+      "places": 333,
+      "allocated": 69.118,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "Wessex",
+      "places": 292,
+      "allocated": 74.663,
+      "allocatedsc": 70.510
+    },
+    {
+      "uoa": "West Midlands Central",
+      "places": 175,
+      "allocated": 78.170,
+      "allocatedsc": 71.645
+    },
+    {
+      "uoa": "West Midlands North",
+      "places": 244,
+      "allocated": 71.003,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "West Midlands South",
+      "places": 162,
+      "allocated": 72.430,
+      "allocatedsc": ""
+    },
+    {
+      "uoa": "Yorkshire and Humber",
+      "places": 559,
+      "allocated": 70.659,
+      "allocatedsc": ""
+    }
+  ]

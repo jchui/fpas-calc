@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import preval from 'preval.macro';
 import { Table, Button } from 'semantic-ui-react';
-import UoAData from '../data/2019uoa.json';
-import UniData from '../data/2019medschools.json';
+import UoAData from '../data/2020uoa.json';
+import UniData from '../data/2020medschools.json';
 import ReactGA from 'react-ga';
 import moment from 'moment';
-
-function handleMesslyClick() {
-    ReactGA.event({
-      category: 'User',
-      action: 'Redirect to messly'
-    });
-    window.location.assign('http://messly.co.uk/training.html?ref=jchui');
-}
 
 class Calculator extends Component{
 
@@ -164,36 +156,24 @@ class Calculator extends Component{
                     <Table.Row>
                         <Table.HeaderCell>Unit of Application</Table.HeaderCell>
                         <Table.HeaderCell>Places</Table.HeaderCell>
-                        <Table.HeaderCell>Lowest Allocated Score in 2019</Table.HeaderCell>
+                        <Table.HeaderCell>Lowest Allocated Score in 2020</Table.HeaderCell>
                         <Table.HeaderCell>Probability</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
                     <Table.Body>
                         {this.renderTable(tableData, sort)}
-
-                        <Table.Row key="messly">
-                                <Table.Cell colSpan={4} className="messly">
-                                    <center>
-                                    <p
-                                      onClick={handleMesslyClick}>
-                                      Want to learn more? We've partnered with <strong>messly</strong> for peer reviews, GMC ratings, and other essential information on the Foundation Programme.
-                                      <span className="start">Get Started</span>
-                                    </p>
-                                    </center>
-                                </Table.Cell>
-                        </Table.Row>
                     </Table.Body>
                 </Table>
 
                 <div className="disclaimer">
-                    <p>Information on this page was sourced from <a href={process.env.PUBLIC_URL + "/data/2019 Recruitment Stats and Facts Report.pdf"}>Foundation Programme 2019 Recruitment Stats and Facts.</a> </p>
+                    <p>Information on this page was sourced from <a href={process.env.PUBLIC_URL + "/data/2020 Recruitment Stats and Facts Report_FINAL.pdf"}>2020 Recruitment Stats and Facts Report.</a> </p>
                     <p>Some information and stats may change as per UKFPO.</p>
                     <br/>
 
                     <div className="build">
                       <p>Build: <strong>{buildTimestamp}</strong></p>
-                      <p>UoA Data: <a href={process.env.PUBLIC_URL + "/data/2019uoa.json"} download>Download JSON</a></p>
-                      <p>Univeristy Data: <a href={process.env.PUBLIC_URL + "/data/2019medschools.json"} download>Download JSON</a></p>
+                      <p>UoA Data: <a href={process.env.PUBLIC_URL + "/data/2020uoa.json"} download>Download JSON</a></p>
+                      <p>Univeristy Data: <a href={process.env.PUBLIC_URL + "/data/2020medschools.json"} download>Download JSON</a></p>
                     </div>
 
                     <br/>

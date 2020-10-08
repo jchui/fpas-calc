@@ -15,7 +15,7 @@ class MainForm extends Component {
         qualifications: 0,
         publications: 0,
         specialcircumstances: false,
-        university: 'Overall Applicants (2019)',
+        university: 'Overall Applicants (2020)',
         email: '',
         sort: false,
     }

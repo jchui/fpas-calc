@@ -26,7 +26,7 @@ class App extends Component {
               <div className="header">
                 <Container>
                 <a href="mailto:jeremy+fpas@jchui.me" className="right">Report Error</a>
-                <h1><strong>FPAS</strong> Calculator ⋅ 2020 Application Cycle</h1>
+                <h1><strong>FPAS</strong> Calculator ⋅ 2021 Application Cycle</h1>
                 </Container>
               </div>
               <Container textAlign="center">
