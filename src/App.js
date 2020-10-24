@@ -47,7 +47,10 @@ class App extends Component {
                         </Button.Content>
                     </Button>
                 </div>
-                <Feedback projectId="5f941c62a115a70004dcf099" />
+                <Feedback 
+                    projectId="5f941c62a115a70004dcf099" 
+                    email="true"
+                />
             </div>
         );
     }
