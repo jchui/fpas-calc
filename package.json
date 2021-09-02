@@ -8,7 +8,7 @@
     "gh-pages": "^2.1.1",
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
-    "object-path": "^0.11.5",
+    "object-path": "^0.11.6",
     "preval.macro": "^3.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
