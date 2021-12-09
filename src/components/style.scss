@@ -1,7 +1,10 @@
 // Style guide
 
+$font-stack: 'Noto Sans';
+
 $primary-color: #000;
 
+
 body {
-    
+    font-family: $font-stack;
 }
