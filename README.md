@@ -14,12 +14,12 @@ Every year, final year medical students rank up foundation schools and deaneries
 This project helps users understand how well they score in comparison to their peers, in order to put themselves in the best possible position when applying for their dream jobs and locations.
 </p>
 
-<center>
-<img src="https://jchui.me/static/fpas-1-0a961acb4ca9489e7477066ad86f3fc6.png" />
-</center>
-
 <hr />
 
 <p align="center">
 This project is currently hosted on <a href="https://jchui.github.io/fpas-calc/">Github Pages</a>.
 </p>
+
+<center>
+<img src="https://jchui.me/static/fpas-1-0a961acb4ca9489e7477066ad86f3fc6.png" />
+</center>
