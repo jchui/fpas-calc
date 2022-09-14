@@ -6,7 +6,7 @@
   "dependencies": {
     "feeder-react-feedback": "^0.0.6",
     "gh-pages": "^2.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-sass": "^4.14.1",
     "object-path": "^0.11.5",
     "prettier": "^2.7.1",
