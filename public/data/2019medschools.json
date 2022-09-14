@@ -5,173 +5,173 @@
     "avg": 39.89
   },
   {
-      "university": "Brighton and Sussex Medical School",
-      "sd": 3.782,
-      "avg": 39.855
-    },
-    {
-      "university": "Cardiff University",
-      "sd": 3.554,
-      "avg": 40.078
-    },
-    {
-      "university": "Eligibility Office",
-      "sd": 3.241,
-      "avg": 41.494
-    },
-    {
-      "university": "Hull and York Medical School",
-      "sd": 2.996,
-      "avg": 40.514
-    },
-    {
-      "university": "Imperial College London",
-      "sd": 3.341,
-      "avg": 40.118
-    },
-    {
-      "university": "Keele University",
-      "sd": 3.22,
-      "avg": 40.185
-    },
-    {
-      "university": "King's College London",
-      "sd": 3.372,
-      "avg": 40.954
-    },
-    {
-      "university": "Newcastle University",
-      "sd": 4.523,
-      "avg": 39.315
-    },
-    {
-      "university": "Norwich Medical School",
-      "sd": 3.475,
-      "avg": 38.999
-    },
-    {
-      "university": "Plymouth University Peninsula Schools",
-      "sd": 2.875,
-      "avg": 40.161
-    },
-    {
-      "university": "Queen Mary, University of London",
-      "sd": 2.882,
-      "avg": 40.481
-    },
-    {
-      "university": "Queen's University Belfast",
-      "sd": 2.753,
-      "avg": 40.869
-    },
-    {
-      "university": "St George's, University of London",
-      "sd": 2.897,
-      "avg": 39.688
-    },
-    {
-      "university": "The University of Edinburgh",
-      "sd": 3.241,
-      "avg": 41.494
-    },
-    {
-      "university": "The University of Sheffield",
-      "sd": 2.971,
-      "avg": 40.831
-    },
-    {
-      "university": "The University of Warwick",
-      "sd": 2.872,
-      "avg": 41.701
-    },
-    {
-      "university": "University College London",
-      "sd": 2.724,
-      "avg": 41.601
-    },
-    {
-      "university": "University of Aberdeen",
-      "sd": 3.554,
-      "avg": 39.508
-    },
-    {
-      "university": "University of Birmingham",
-      "sd": 2.931,
-      "avg": 40.063
-    },
-    {
-      "university": "University of Buckingham",
-      "sd": 2.678,
-      "avg": 38.495
-    },
-    {
-      "university": "University of Bristol",
-      "sd": 3.534,
-      "avg": 40.308
-    },
-    {
-      "university": "University of Cambridge",
-      "sd": 2.981,
-      "avg": 42.567
-    },
-    {
-      "university": "University of Dundee",
-      "sd": 3.72,
-      "avg": 39.465
-    },
-    {
-      "university": "University of Exeter",
-      "sd": 3.63,
-      "avg": 40.56
-    },
-    {
-      "university": "University of Glasgow",
-      "sd": 3.879,
-      "avg": 40.017
-    },
-    {
-      "university": "University of Lancaster",
-      "sd": 3.713,
-      "avg": 39.624
-    },
-    {
-      "university": "University of Leeds",
-      "sd": 2.942,
-      "avg": 41.016
-    },
-    {
-      "university": "University of Leicester",
-      "sd": 2.797,
-      "avg": 41.34
-    },
-    {
-      "university": "University of Liverpool",
-      "sd": 3.334,
-      "avg": 39.68
-    },
-    {
-      "university": "University of Manchester",
-      "sd": 3.663,
-      "avg": 40.204
-    },
-    {
-      "university": "University of Nottingham",
-      "sd": 3.287,
-      "avg": 41.16
-    },
-    {
-      "university": "University of Oxford",
-      "sd": 2.853,
-      "avg": 41.893
-    },
-    {
-      "university": "University of Southampton",
-      "sd": 3.041,
-      "avg": 40.099
-    },
-    {
-      "university": "University of Swansea",
-      "sd": 3.408,
-      "avg": 40.543
-    }
-  ]
+    "university": "Brighton and Sussex Medical School",
+    "sd": 3.782,
+    "avg": 39.855
+  },
+  {
+    "university": "Cardiff University",
+    "sd": 3.554,
+    "avg": 40.078
+  },
+  {
+    "university": "Eligibility Office",
+    "sd": 3.241,
+    "avg": 41.494
+  },
+  {
+    "university": "Hull and York Medical School",
+    "sd": 2.996,
+    "avg": 40.514
+  },
+  {
+    "university": "Imperial College London",
+    "sd": 3.341,
+    "avg": 40.118
+  },
+  {
+    "university": "Keele University",
+    "sd": 3.22,
+    "avg": 40.185
+  },
+  {
+    "university": "King's College London",
+    "sd": 3.372,
+    "avg": 40.954
+  },
+  {
+    "university": "Newcastle University",
+    "sd": 4.523,
+    "avg": 39.315
+  },
+  {
+    "university": "Norwich Medical School",
+    "sd": 3.475,
+    "avg": 38.999
+  },
+  {
+    "university": "Plymouth University Peninsula Schools",
+    "sd": 2.875,
+    "avg": 40.161
+  },
+  {
+    "university": "Queen Mary, University of London",
+    "sd": 2.882,
+    "avg": 40.481
+  },
+  {
+    "university": "Queen's University Belfast",
+    "sd": 2.753,
+    "avg": 40.869
+  },
+  {
+    "university": "St George's, University of London",
+    "sd": 2.897,
+    "avg": 39.688
+  },
+  {
+    "university": "The University of Edinburgh",
+    "sd": 3.241,
+    "avg": 41.494
+  },
+  {
+    "university": "The University of Sheffield",
+    "sd": 2.971,
+    "avg": 40.831
+  },
+  {
+    "university": "The University of Warwick",
+    "sd": 2.872,
+    "avg": 41.701
+  },
+  {
+    "university": "University College London",
+    "sd": 2.724,
+    "avg": 41.601
+  },
+  {
+    "university": "University of Aberdeen",
+    "sd": 3.554,
+    "avg": 39.508
+  },
+  {
+    "university": "University of Birmingham",
+    "sd": 2.931,
+    "avg": 40.063
+  },
+  {
+    "university": "University of Buckingham",
+    "sd": 2.678,
+    "avg": 38.495
+  },
+  {
+    "university": "University of Bristol",
+    "sd": 3.534,
+    "avg": 40.308
+  },
+  {
+    "university": "University of Cambridge",
+    "sd": 2.981,
+    "avg": 42.567
+  },
+  {
+    "university": "University of Dundee",
+    "sd": 3.72,
+    "avg": 39.465
+  },
+  {
+    "university": "University of Exeter",
+    "sd": 3.63,
+    "avg": 40.56
+  },
+  {
+    "university": "University of Glasgow",
+    "sd": 3.879,
+    "avg": 40.017
+  },
+  {
+    "university": "University of Lancaster",
+    "sd": 3.713,
+    "avg": 39.624
+  },
+  {
+    "university": "University of Leeds",
+    "sd": 2.942,
+    "avg": 41.016
+  },
+  {
+    "university": "University of Leicester",
+    "sd": 2.797,
+    "avg": 41.34
+  },
+  {
+    "university": "University of Liverpool",
+    "sd": 3.334,
+    "avg": 39.68
+  },
+  {
+    "university": "University of Manchester",
+    "sd": 3.663,
+    "avg": 40.204
+  },
+  {
+    "university": "University of Nottingham",
+    "sd": 3.287,
+    "avg": 41.16
+  },
+  {
+    "university": "University of Oxford",
+    "sd": 2.853,
+    "avg": 41.893
+  },
+  {
+    "university": "University of Southampton",
+    "sd": 3.041,
+    "avg": 40.099
+  },
+  {
+    "university": "University of Swansea",
+    "sd": 3.408,
+    "avg": 40.543
+  }
+]

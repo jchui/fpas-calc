@@ -9,6 +9,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
     "object-path": "^0.11.5",
+    "prettier": "^2.7.1",
     "preval.macro": "^3.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -21,6 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
